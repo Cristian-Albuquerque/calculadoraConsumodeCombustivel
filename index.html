@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <style type="text/css" href="./estilos.css"></style>
+    <link rel="stylesheet" type="text/css" href="./estilos.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de consumo de combustível</title>
+</head>
+<body>
+  <h1>Calcular consumo de combustível</h1>
+</br>
+
+<hr>
+<form id="form">
+  <label>Quantidade de litros consumidos:</label> 
+  <input type="number" id="litros" placeholder="Quantidade de combustível consumido"></input>
+  <label>Distância percorrida:</label>
+  <input type="number" id="dist" placeholder="Distância percorrida"></input>
+  <br>
+  <button type="submit" id="botao" onclick="calc()">Calcular</button>
+</form>
+
+<hr>
+
+</body>
+<script>
+  
+  function calc(){
+    var litros=document.getElementById('litros').value;
+    var dist=document.getElementById('dist').value;
+    consumo=dist/litros;
+    window.alert('Consumo: ' + consumo + ' km/l \n Em caso de alto consumo procure uma Oficina Autorizada.')
+  }
+
+</script>
+</html>
