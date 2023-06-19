@@ -1,37 +1,88 @@
 body {
-    background-color: rgb(91, 92, 94);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
 }
 
 h1 {
-    color:antiquewhite;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+main {
+    padding: 20px;
     text-align: center;
 }
 
 #form {
-    justify-items: center;
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
+#label1 {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #555;
+  }
+
+#label2 {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #555;
+  }
 
 #litros {
-    
-}
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+  }
 
 #dist {
-    
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 20px; 
 }
 
 #botao {
-    background-color: blue;
-    color: whitesmoke;
-    justify-content: center;
-    margin: 50%;
-    margin-top: 25px;
-    margin-bottom: 25px;
-    padding-top: 5px;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-bottom: 5px;;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
 }
 
 #resultado {
-    background-color: white;
+    margin-top: 20px;
+    font-weight: bold;
 }
+
+/* Estilos responsivos */
+@media (max-width: 600px) {
+    form {
+      max-width: 300px;
+    }
+  }
+
+  @media (max-width: 400px) {
+    form {
+      padding: 20px;
+    }
+  }

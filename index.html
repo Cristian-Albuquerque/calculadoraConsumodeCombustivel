@@ -12,27 +12,38 @@
   <h1>Calcular consumo de combustível</h1>
 </br>
 
+<main>
+
 <hr>
+
 <form id="form">
-  <label>Quantidade de litros consumidos:</label> 
-  <input type="number" id="litros" placeholder="Quantidade de combustível consumido"></input>
-  <label>Distância percorrida:</label>
-  <input type="number" id="dist" placeholder="Distância percorrida"></input>
+  <label id="label1">Quantidade de litros consumidos:</label> 
+  <input type="number" id="litros" required="required" placeholder="Quantidade de combustível consumido"></input>
+  <label id="label2">Distância percorrida (km):</label>
+  <input type="number" id="dist" required="required" placeholder="Distância percorrida"></input>
   <br>
-  <button type="submit" id="botao" onclick="calc()">Calcular</button>
+  <button type="button" id="botao" onclick="calc()">Calcular</button>
 </form>
 
 <hr>
 
+<div id="resultado">
+
+</div>
+</main>
+
 </body>
+
 <script>
   
   function calc(){
-    var litros=document.getElementById('litros').value;
-    var dist=document.getElementById('dist').value;
-    consumo=dist/litros;
-    window.alert('Consumo: ' + consumo + ' km/l \n Em caso de alto consumo procure uma Oficina Autorizada.')
+    var litros=parseFloat(document.getElementById('litros').value);
+    var dist=parseFloat(document.getElementById('dist').value);
+    const consumo=dist/litros;
+    const resultadoDiv=document.getElementById('resultado');
+    resultadoDiv.innerText = `Consumo médio: ${consumo.toFixed(2)} km/l`
   }
 
 </script>
+
 </html>
